@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-sky-blue: #4fc3f7;
+  --color-deep-blue: #0277bd;
+  --color-aqua: #26c6da;
+  --color-fresh-green: #7cb342;
+  --color-soft-white: #f5fbff;
+  
+  --text: #0b3b5c;
+
+  --gloss-top: #9be0ff;
+  --gloss-mid: #5cc8f7;
+  --gloss-low: #1a9ae0;
+  --gloss-bottom: #0277bd;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--text)
+}
+
+.container {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  border-radius: 20px;
+  height: 800px;
+  width: 1200px;
+  box-shadow: 0 0 10px black;
+  display: flex;
+  overflow: hidden;
+}
+
+.visual-side {
+  background-image: url("./assets/firli-s-WRkf-oCmf9w-unsplash.jpg");
+  background-size: cover;
+  background-position: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+
+  .icon {
+    height: 50px;
+    width: 50px;
+    filter: drop-shadow(0 0 5px black);
+  }
+
+  .title {
+    color: white;
+    filter: drop-shadow(0 0 5px black);
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .tagline {
+    color: white;
+    filter: drop-shadow(0 0 5px black);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+.signup-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  flex: 1; 
+
+  background: linear-gradient(
+    to bottom,
+    var(--color-soft-white),
+    var(--color-sky-blue)
+  );
+
+  .login-header,
+  .login-form,
+  .divider,
+  .social {
+    width: 100%;
+    max-width: 370px;
+  }
+
+  .login-header {
+    text-align: center;
+
+    h1 {
+      font-weight: 400;
+    }
+
+    .subtitle {
+      margin-top: 5px;
+      color: color-mix(in srgb, var(--text) 65%, transparent);
+      font-size: 0.9rem;
+    }
+  }
+
+  .login-form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    input {
+      font-size: 0.8rem;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 5px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--gloss-low);
+      box-shadow: 0 0 8px color-mix(in srgb, var(--gloss-low) 40%, transparent);
+    }
+
+    .btn-main {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(
+        to bottom,
+        var(--gloss-top) 0%,
+        var(--gloss-mid) 50%,
+        var(--gloss-low) 50%,
+        var(--gloss-bottom) 100%
+      );
+      border: 1px solid
+        color-mix(in srgb, var(--color-soft-white) 60%, transparent);
+      box-shadow:
+        inset 0 1px 1px
+          color-mix(in srgb, var(--color-soft-white) 90%, transparent),
+        0 0 15px color-mix(in srgb, var(--color-deep-blue) 40%, transparent);
+      text-shadow: 0 1px 2px rgba(0, 60, 110, 0.5);
+      color: white;
+      cursor: pointer;
+      /* How long each transition will take before it's fully applied */
+      transition:
+        filter 0.2s,
+        box-shadow 0.2s,
+        transform 0.2s;
+    }
+
+    .btn-main:hover {
+      /* How bright it should be  */
+      filter: brightness(1.1);
+
+      box-shadow:
+        inset 0 1px 1px
+          color-mix(in srgb, var(--color-soft-white) 90%, transparent),
+        0 0 22px color-mix(in srgb, var(--gloss-bottom) 55%, transparent);
+
+      /* Where it'll float to, in this case it'll float vertically */
+      transform: translateY(-2px);
+    }
+
+    .btn-main:active {
+      /* When the button is pressed it'll transition back to it's original position, making it slightly darker */
+      transform: translateY(0);
+      filter: brightness(0.95);
+    }
+
+  }
+
+  button,
+  input {
+    font: inherit;
+  }
+
+  .divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .word {
+      font-size: 0.7rem;
+      color: grey;
+    }
+
+    .line {
+      flex: 1;
+      border-top: 1px solid #ddd;
+    }
+  }
+
+  .social {
+    display: flex;
+    gap: 10px;
+
+    .btn-social {
+      flex: 1;
+
+      border: 1px solid #ddd;
+      background: linear-gradient(
+        var(--color-soft-white),
+        var(--color-sky-blue)
+      );
+      border: 1px solid
+        color-mix(in srgb, var(--color-soft-white) 60%, transparent);
+      box-shadow:
+        inset 0 1px 1px
+          color-mix(in srgb, var(--color-soft-white) 90%, transparent),
+        0 0 15px color-mix(in srgb, var(--color-deep-blue) 40%, transparent);
+      border-radius: 20px;
+
+      padding: 10px;
+      cursor: pointer;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+
+      font-family: "Poppins", sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text);
+
+      transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
+
+      .btn-social img {
+        width: 20px;
+        height: 20px;
+        
+      }
+
+      &:hover {
+        background: linear-gradient(to bottom, white, #cdeeff);
+        border-color: color-mix(in srgb, var(--gloss-low) 45%, transparent);
+        box-shadow:
+          inset 0 1px 1px color-mix(in srgb, white 90%, transparent),
+          0 0 8px color-mix(in srgb, var(--gloss-low) 25%, transparent);
+      }
+    }
+  }
+
+  .switch {
+    margin-top: 10px;
+    font-size: 0.7rem;
+
+    a {
+      color: var(--gloss-bottom);
+    }
+  }
+}

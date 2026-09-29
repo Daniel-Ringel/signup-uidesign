@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="base.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="visual-side">
+        <img class="icon" src="./assets/vista_messenger.ico" />
+        <!-- <img class="background" src="./assets/firli-s-WRkf-oCmf9w-unsplash.jpg"> -->
+        <!-- Use justify-content: space-between; and wrap both text together with a div! -->
+        <div>
+          <p class="title">A brighter, greener world</p>
+          <p class="tagline">Sign up and step into the future</p>
+        </div>
+      </div>
+      <div class="signup-side">
+        <!-- Box 1: the words at the top -->
+        <div class="login-header">
+          <h1>Welcome back!</h1>
+          <p class="subtitle">Sign in to step into the future.</p>
+        </div>
+
+        <!-- Box 2: the form -->
+        <form class="login-form">
+          <label for="email">Email</label>
+          <input placeholder="name@email.com" type="email" id="email" />
+          <label for="password">Password</label>
+          <input placeholder="••••••••" type="password" id="password" />
+          <button type="submit" class="btn-main">Sign In</button>
+        </form>
+
+        <!-- Box 3: the "or" line -->
+        <div class="divider">
+          <span class="line"></span>
+          <span class="word">or</span>
+          <span class="line"></span>
+        </div>
+
+        <!-- Box 4: the two small buttons -->
+        <div class="social">
+          <button class="btn-social"><img src="./assets/google.svg" alt="Google">Continue with Google</button>
+          <button class="btn-social"><img src="./assets/facebook.svg" alt="Facebook">Continue with Facebook</button>
+        </div>
+
+        <!-- Box 5: sign up link -->
+         <p class="switch">
+            Don't have an account? <a href="#">Sign Up!</a>
+         </p>
+      </div>
+    </div>
+  </body>
+</html>
